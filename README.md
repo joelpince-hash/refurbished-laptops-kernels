@@ -7,7 +7,7 @@ L'idée est de prolonger la durée de vie de matériel informatique de qualité 
 Ces configurations sont destinées à **Debian Stable**. Elles visent à produire un système :
 * **Ultra-léger :** Suppression des pilotes inutiles et du "bloatware" du noyau générique.
 * **Performant :** Optimisation spécifique au processeur (CPU) et au matériel de chaque machine.
-* **Stable :** Basé sur les versions LTS (Long Term Support) du noyau.
+* **Stable :** Basé sur la dernière version stable du noyau (Trixie).
 
 Idéal pour les étudiants ou les petits budgets cherchant une machine rapide et fiable pour travailler.
 
@@ -51,6 +51,7 @@ Si vous avez acquis un de ces PC ou si vous possédez le même modèle, voici co
 
 ---
 
+Vous pouvez aussi télécharger les noyaux déjà installables fournis dans les packages. Mais une compilation du dernier noyau disponible est une meilleure idée.
 ## ⚠️ Avertissement
 Ces configurations sont fournies "telles quelles". Elles sont taillées pour le matériel spécifique listé ci-dessus. L'utilisation sur d'autres machines peut entraîner des instabilités ou un système non-bootable.
 
