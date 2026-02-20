@@ -30,8 +30,13 @@ Si vous avez acquis un de ces PC ou si vous possédez le même modèle, voici co
 
 1.  **Installez les pré-requis sur Debian :**
     ```bash
-    sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev
+    sudo apt install build-essential ccache zstd bc git rsync dpkg-dev debhelper dwarves libdw-dev libelf-dev libssl-dev libncurses-dev flex bison btop lm-sensors htop btrfs-progs
     ```
+Je vous invite à configurer ccache à 20Go max.
+    ```bash
+    ccache -M 20G
+    ```bash
+N'oublie pas d'ajouter ccache à ton PATH : export PATH=\"/usr/lib/ccache:\$PATH\"
 
 2.  **Téléchargez les sources du noyau (sur kernel.org) et extrayez-les.**
 
