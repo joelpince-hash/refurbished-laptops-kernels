@@ -49,7 +49,7 @@ N'oubliez pas d'ajouter ccache à votre PATH :
 4.  **Lancez la compilation :**
     ```bash
     make oldconfig
-    make -j$(nproc) bindeb-pkg
+    time make CC="ccache gcc" KCFLAGS="-march=native -O3" -j2 bindeb-pkg
     ```
 
 5.  **Installez les .deb générés :**
