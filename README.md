@@ -40,6 +40,7 @@ N'oubliez pas d'ajouter ccache à votre PATH :
     ```bash
     export PATH=\"/usr/lib/ccache:\$PATH\"
     ```
+
 2.  **Téléchargez les sources du noyau (sur kernel.org) et extrayez-les.**
 
 3.  **Récupérez mon fichier `.config` :**
