@@ -35,9 +35,11 @@ Si vous avez acquis un de ces PC ou si vous possédez le même modèle, voici co
 Je vous invite à configurer ccache à 20Go max.
     ```bash
     ccache -M 20G
+    ```
+N'oubliez pas d'ajouter ccache à votre PATH :
     ```bash
-N'oublie pas d'ajouter ccache à ton PATH : export PATH=\"/usr/lib/ccache:\$PATH\"
-
+    export PATH=\"/usr/lib/ccache:\$PATH\"
+    ```
 2.  **Téléchargez les sources du noyau (sur kernel.org) et extrayez-les.**
 
 3.  **Récupérez mon fichier `.config` :**
