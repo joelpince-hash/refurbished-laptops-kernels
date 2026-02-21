@@ -1,0 +1,96 @@
+joel@joel-Inspiron-1520:~$ lspci
+00:00.0 Host bridge: Intel Corporation Mobile PM965/GM965/GL960 Memory Controller Hub (rev 0c)
+00:01.0 PCI bridge: Intel Corporation Mobile PM965/GM965/GL960 PCI Express Root Port (rev 0c)
+00:1a.0 USB controller: Intel Corporation 82801H (ICH8 Family) USB UHCI Controller #4 (rev 02)
+00:1a.1 USB controller: Intel Corporation 82801H (ICH8 Family) USB UHCI Controller #5 (rev 02)
+00:1a.7 USB controller: Intel Corporation 82801H (ICH8 Family) USB2 EHCI Controller #2 (rev 02)
+00:1b.0 Audio device: Intel Corporation 82801H (ICH8 Family) HD Audio Controller (rev 02)
+00:1c.0 PCI bridge: Intel Corporation 82801H (ICH8 Family) PCI Express Port 1 (rev 02)
+00:1c.1 PCI bridge: Intel Corporation 82801H (ICH8 Family) PCI Express Port 2 (rev 02)
+00:1c.3 PCI bridge: Intel Corporation 82801H (ICH8 Family) PCI Express Port 4 (rev 02)
+00:1d.0 USB controller: Intel Corporation 82801H (ICH8 Family) USB UHCI Controller #1 (rev 02)
+00:1d.1 USB controller: Intel Corporation 82801H (ICH8 Family) USB UHCI Controller #2 (rev 02)
+00:1d.2 USB controller: Intel Corporation 82801H (ICH8 Family) USB UHCI Controller #3 (rev 02)
+00:1d.7 USB controller: Intel Corporation 82801H (ICH8 Family) USB2 EHCI Controller #1 (rev 02)
+00:1e.0 PCI bridge: Intel Corporation 82801 Mobile PCI Bridge (rev f2)
+00:1f.0 ISA bridge: Intel Corporation 82801HM (ICH8M) LPC Interface Controller (rev 02)
+00:1f.1 IDE interface: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) IDE Controller (rev 02)
+00:1f.2 SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)
+00:1f.3 SMBus: Intel Corporation 82801H (ICH8 Family) SMBus Controller (rev 02)
+01:00.0 VGA compatible controller: NVIDIA Corporation G84M [GeForce 8600M GT] (rev a1)
+03:00.0 Ethernet controller: Broadcom Inc. and subsidiaries BCM4401-B0 100Base-TX (rev 02)
+03:01.0 FireWire (IEEE 1394): Ricoh Co Ltd R5C832 IEEE 1394 Controller (rev 05)
+03:01.1 SD Host controller: Ricoh Co Ltd R5C822 SD/SDIO/MMC/MS/MSPro Host Adapter (rev 22)
+03:01.2 System peripheral: Ricoh Co Ltd R5C592 Memory Stick Bus Host Adapter (rev 12)
+03:01.3 System peripheral: Ricoh Co Ltd xD-Picture Card Controller (rev 12)
+0c:00.0 Network controller: Intel Corporation PRO/Wireless 4965 AG or AGN [Kedron] Network Connection (rev 61)
+joel@joel-Inspiron-1520:~$ lscpu
+Architecture :                              x86_64
+  Mode(s) opératoire(s) des processeurs :   32-bit, 64-bit
+  Tailles des adresses:                     36 bits physical, 48 bits virtual
+  Boutisme :                                Little Endian
+Processeur(s) :                             2
+  Liste de processeur(s) en ligne :         0,1
+Identifiant constructeur :                  GenuineIntel
+  Nom de modèle :                           Intel(R) Core(TM)2 Duo CPU     T9300
+                                              @ 2.50GHz
+    Famille de processeur :                 6
+    Modèle :                                23
+    Thread(s) par cœur :                    1
+    Cœur(s) par socket :                    2
+    Socket(s) :                             1
+    Révision :                              6
+    Accroissement de fréquence :            activé
+    multiplication des MHz du/des CPU(s) :  100%
+    Vitesse maximale du processeur en MHz : 2501,0000
+    Vitesse minimale du processeur en MHz : 800,0000
+    BogoMIPS :                              4987,36
+    Drapeaux :                              fpu vme de pse tsc msr pae mce cx8 a
+                                            pic sep mtrr pge mca cmov pat pse36 
+                                            clflush dts acpi mmx fxsr sse sse2 h
+                                            t tm pbe syscall nx lm constant_tsc 
+                                            arch_perfmon pebs bts rep_good nopl 
+                                            cpuid aperfmperf pni dtes64 monitor 
+                                            ds_cpl vmx est tm2 ssse3 cx16 xtpr p
+                                            dcm sse4_1 lahf_lm tpr_shadow flexpr
+                                            iority vpid dtherm ida vnmi
+Fonctionnalités de virtualisation :         
+  Virtualisation :                          VT-x
+Caches (somme de toutes) :                  
+  L1d :                                     64 KiB (2 instances)
+  L1i :                                     64 KiB (2 instances)
+  L2 :                                      6 MiB (1 instance)
+Vulnérabilités :                            
+  Gather data sampling :                    Not affected
+  Ghostwrite :                              Not affected
+  Indirect target selection :               Not affected
+  Itlb multihit :                           Processor vulnerable
+  L1tf :                                    Mitigation; PTE Inversion
+  Mds :                                     Vulnerable; SMT disabled
+  Meltdown :                                Vulnerable
+  Mmio stale data :                         Not affected
+  Old microcode :                           Not affected
+  Reg file data sampling :                  Not affected
+  Retbleed :                                Not affected
+  Spec rstack overflow :                    Not affected
+  Spec store bypass :                       Vulnerable
+  Spectre v1 :                              Vulnerable: __user pointer sanitizat
+                                            ion and usercopy barriers only; no s
+                                            wapgs barriers
+  Spectre v2 :                              Vulnerable; STIBP: disabled; PBRSB-e
+                                            IBRS: Not affected; BHI: Not affecte
+                                            d
+  Srbds :                                   Not affected
+  Tsa :                                     Not affected
+  Tsx async abort :                         Not affected
+  Vmscape :                                 Not affected
+joel@joel-Inspiron-1520:~$ lsusb
+Bus 001 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 002: ID 05a9:2640 OmniVision Technologies, Inc. OV2640 Webcam
+Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 005 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 006 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 007 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+

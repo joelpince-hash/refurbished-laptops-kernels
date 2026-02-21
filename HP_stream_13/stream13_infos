@@ -1,0 +1,90 @@
+gilles@gilles-HP-Stream-Notebook-PC-13:~$ lspci
+00:00.0 Host bridge: Intel Corporation Atom Processor Z36xxx/Z37xxx Series SoC Transaction Register (rev 0e)
+00:02.0 VGA compatible controller: Intel Corporation Atom Processor Z36xxx/Z37xxx Series Graphics & Display (rev 0e)
+00:14.0 USB controller: Intel Corporation Atom Processor Z36xxx/Z37xxx, Celeron N2000 Series USB xHCI (rev 0e)
+00:1a.0 Encryption controller: Intel Corporation Atom Processor Z36xxx/Z37xxx Series Trusted Execution Engine (rev 0e)
+00:1b.0 Audio device: Intel Corporation Atom Processor Z36xxx/Z37xxx Series High Definition Audio Controller (rev 0e)
+00:1c.0 PCI bridge: Intel Corporation Atom Processor E3800 Series PCI Express Root Port 1 (rev 0e)
+00:1c.1 PCI bridge: Intel Corporation Atom Processor E3800 Series PCI Express Root Port 2 (rev 0e)
+00:1c.3 PCI bridge: Intel Corporation Atom Processor E3800 Series PCI Express Root Port 4 (rev 0e)
+00:1f.0 ISA bridge: Intel Corporation Atom Processor Z36xxx/Z37xxx Series Power Control Unit (rev 0e)
+00:1f.3 SMBus: Intel Corporation Atom Processor E3800/CE2700 Series SMBus Controller (rev 0e)
+02:00.0 Network controller: Broadcom Inc. and subsidiaries BCM43142 802.11b/g/n (rev 01)
+03:00.0 Unassigned class [ff00]: Realtek Semiconductor Co., Ltd. RTS5229 PCI Express Card Reader (rev 01)
+gilles@gilles-HP-Stream-Notebook-PC-13:~$ lscpu
+Architecture :                              x86_64
+  Mode(s) opératoire(s) des processeurs :   32-bit, 64-bit
+  Tailles des adresses:                     36 bits physical, 48 bits virtual
+  Boutisme :                                Little Endian
+Processeur(s) :                             2
+  Liste de processeur(s) en ligne :         0,1
+Identifiant constructeur :                  GenuineIntel
+  Nom de modèle :                           Intel(R) Celeron(R) CPU  N2840  @ 2.
+                                            16GHz
+    Famille de processeur :                 6
+    Modèle :                                55
+    Thread(s) par cœur :                    1
+    Cœur(s) par socket :                    2
+    Socket(s) :                             1
+    Révision :                              8
+    multiplication des MHz du/des CPU(s) :  100%
+    Vitesse maximale du processeur en MHz : 2582,3000
+    Vitesse minimale du processeur en MHz : 499,8000
+    BogoMIPS :                              4333,33
+    Drapeaux :                              fpu vme de pse tsc msr pae mce cx8 a
+                                            pic sep mtrr pge mca cmov pat pse36 
+                                            clflush dts acpi mmx fxsr sse sse2 s
+                                            s ht tm pbe syscall nx rdtscp lm con
+                                            stant_tsc arch_perfmon pebs bts rep_
+                                            good nopl xtopology tsc_reliable non
+                                            stop_tsc cpuid aperfmperf tsc_known_
+                                            freq pni pclmulqdq dtes64 monitor ds
+                                            _cpl vmx est tm2 ssse3 cx16 xtpr pdc
+                                            m sse4_1 sse4_2 movbe popcnt tsc_dea
+                                            dline_timer rdrand lahf_lm 3dnowpref
+                                            etch epb pti ibrs ibpb stibp tpr_sha
+                                            dow flexpriority ept vpid tsc_adjust
+                                             smep erms dtherm ida arat vnmi md_c
+                                            lear
+Fonctionnalités de virtualisation :         
+  Virtualisation :                          VT-x
+Caches (somme de toutes) :                  
+  L1d :                                     48 KiB (2 instances)
+  L1i :                                     64 KiB (2 instances)
+  L2 :                                      1 MiB (1 instance)
+NUMA :                                      
+  Nœud(s) NUMA :                            1
+  Nœud NUMA 0 de processeur(s) :            0,1
+Vulnérabilités :                            
+  Gather data sampling :                    Not affected
+  Ghostwrite :                              Not affected
+  Indirect target selection :               Not affected
+  Itlb multihit :                           Not affected
+  L1tf :                                    Not affected
+  Mds :                                     Mitigation; Clear CPU buffers; SMT d
+                                            isabled
+  Meltdown :                                Mitigation; PTI
+  Mmio stale data :                         Unknown: No mitigations
+  Reg file data sampling :                  Not affected
+  Retbleed :                                Not affected
+  Spec rstack overflow :                    Not affected
+  Spec store bypass :                       Not affected
+  Spectre v1 :                              Mitigation; usercopy/swapgs barriers
+                                             and __user pointer sanitization
+  Spectre v2 :                              Mitigation; Retpolines; IBPB conditi
+                                            onal; IBRS_FW; STIBP disabled; RSB f
+                                            illing; PBRSB-eIBRS Not affected; BH
+                                            I Not affected
+  Srbds :                                   Not affected
+  Tsa :                                     Not affected
+  Tsx async abort :                         Not affected
+  Vmscape :                                 Not affected
+gilles@gilles-HP-Stream-Notebook-PC-13:~$ lsusb
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 05c8:0379 Cheng Uei Precision Industry Co., Ltd (Foxlink) HP Truevision HD
+Bus 001 Device 003: ID 05e3:0608 Genesys Logic, Inc. Hub
+Bus 001 Device 005: ID 0a5c:216c Broadcom Corp. BCM43142A0 Bluetooth Device
+Bus 001 Device 006: ID 18d1:4eeb Google Inc. Pixel 10 Pro
+Bus 001 Device 007: ID 058f:6387 Alcor Micro Corp. Flash Drive
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+
