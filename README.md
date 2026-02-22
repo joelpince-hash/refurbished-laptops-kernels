@@ -1,6 +1,6 @@
 # 🐧 Configurations du noyau Linux Optimisées (Refurbished Laptops)
 
-Ce dépôt héberge les fichiers de configuration (`.config`) du noyau Linux (Kernel), optimisés spécifiquement pour des ordinateurs portables professionnels d'ancienne génération reconditionnés. L'objectif est d'obtenir un kernel léger, tout en assurant la compatibilité avec le matériel usuel (clavier et souris externes, etc).'
+Ce dépôt héberge les fichiers de configuration (`.config`) du noyau Linux (Kernel), optimisés spécifiquement pour des ordinateurs portables professionnels d'ancienne génération reconditionnés. L'objectif est d'obtenir un kernel léger, tout en assurant la compatibilité avec le matériel usuel (clavier et souris externes, etc).
 
 ## 🎯 L'Objectif
 L'idée est de prolonger la durée de vie de matériel informatique de qualité (Dell Latitude, Inspiron, ThinkPad...) qui ne supporte plus Windows 11.
@@ -27,20 +27,20 @@ Idéal pour les étudiants ou les petits budgets cherchant une machine rapide et
 
 ## 🛠 Comment utiliser ces configurations ?
 
-Si vous avez acquis un de ces PC ou si vous possédez le même modèle, voici comment compiler votre noyau avec ma configuration :
+Si vous avez acquis un de ces PC ou si vous possédez le même modèle, vous pouvez installer une version de Debian (stable ou testing), Linux Mint ou Ubuntu. Si vous décidez de compiler votre propre noyau, n'oubliez pas que la sécurité vous incombera désormais et qu'il vous faudra suivre l'évolution des kernels publiés sur kernel.org ! Voici comment compiler votre noyau avec ma configuration :
 
 1.  **Installez les pré-requis sur Debian :**
     ```bash
     sudo apt install build-essential ccache zstd bc git rsync dpkg-dev debhelper dwarves libdw-dev libelf-dev libssl-dev libncurses-dev flex bison btop lm-sensors htop btrfs-progs
     ```
-Je vous invite à configurer ccache à 20Go max.
-    ```bash
-    ccache -M 20G
-    ```
-N'oubliez pas d'ajouter ccache à votre PATH :
-    ```bash
-    export PATH=\"/usr/lib/ccache:\$PATH\"
-    ```
+        a) Je vous invite à configurer ccache à 20Go max.
+            ```bash
+            ccache -M 20G
+            ```
+        b) N'oubliez pas d'ajouter ccache à votre PATH :
+            ```bash
+            export PATH=\"/usr/lib/ccache:\$PATH\"
+            ```
 
 2.  **Téléchargez les sources du noyau (sur kernel.org) et extrayez-les.**
 
@@ -50,7 +50,7 @@ N'oubliez pas d'ajouter ccache à votre PATH :
 4.  **Lancez la compilation :**
     ```bash
     make oldconfig
-    time make CC="ccache gcc" KCFLAGS="-march=native -O3" -j2 bindeb-pkg
+    time make CC="ccache gcc" KCFLAGS="-march=native -O2" -j"$(nproc)" bindeb-pkg
     ```
 
 5.  **Installez les .deb générés :**
@@ -60,9 +60,9 @@ N'oubliez pas d'ajouter ccache à votre PATH :
 
 ---
 
-Vous pouvez aussi télécharger les noyaux déjà installables fournis dans les packages. Mais une compilation du dernier noyau disponible est une meilleure idée.
+Vous pouvez aussi télécharger les noyaux déjà installables fournis dans les packages. Mais une compilation du dernier noyau disponible est une meilleure idée ; vous pourrez modifier les modules selon votre matériel qui peut différer de mes ordinateurs de test.
 ## ⚠️ Avertissement
-Ces configurations sont fournies "telles quelles". Elles sont taillées pour le matériel spécifique listé ci-dessus. L'utilisation sur d'autres machines peut entraîner des instabilités ou un système non-bootable.
+Ces configurations sont fournies "telles quelles" et doivent probablement être adaptées à votre matériel et vos usages. L'utilisation sur votre peut entraîner des instabilités ou un système non-bootable. Gardez toujours un kernel générique de secours sur lequel vous serez assurés de pouvoir redémarrer.
 
 **Auteur :** JoelPince-Hash
 *Passionné par la rénovation informatique et l'Open Source.*
